@@ -31,6 +31,7 @@
     </audio>
     <header class="text-center py-10 bg-blue-800 text-white animate__animated animate__fadeInDown">
         <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 23:00</h1>
+        <button id="music">Musica</button>
     </header>
     <main class="container mx-auto py-10">
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -96,12 +97,11 @@
         function delay(time) {
             return new Promise(resolve => setTimeout(resolve, time));
         }
-        delay(2000).then(() => {
 
+                const musica = document.getElementById('music')
                 const audio = document.getElementById('background-audio');
-                audio.volume = 0.1; // Define o volume para 30%
+                audio.volume = 0.2; // Define o volume para 30%
 
-                audio.play();
 
 
                 const atrainbutton = document.getElementById('atrainbutton')
@@ -115,11 +115,10 @@
                 })
 
 
-                atrainbutton.addEventListener('mouseleave', () => {
+                musica.addEventListener('click', () => {
                     audio.play()
                 })
-            })
-
+        
 
 
         
