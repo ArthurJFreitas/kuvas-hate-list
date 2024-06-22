@@ -81,7 +81,7 @@
                 class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
                 <img src="https://files.meiobit.com/wp-content/uploads/2024/03/The-Boys-A-Train.jpg"
                     alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
-                <h2 class="text-xl font-semibold">Som do A train (passe o mouse)</h2>
+                <h2 class="text-xl font-semibold">Som do A train (clique)</h2>
             </li>
 
             <li
@@ -106,7 +106,7 @@
 
                 const atrainbutton = document.getElementById('atrainbutton')
 
-                atrainbutton.addEventListener('mouseover', () => {
+                atrainbutton.addEventListener('click', () => {
                     console.log('a')
                     audio.pause()
                     const atrain = document.getElementById('atrain-audio')
@@ -116,7 +116,7 @@
 
 
                 atrainbutton.addEventListener('mouseleave', () => {
-                    audio.pause()
+                    audio.play()
                 })
             })
 
