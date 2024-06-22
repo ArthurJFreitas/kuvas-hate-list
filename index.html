@@ -25,8 +25,12 @@
         <source src="./assets/hate.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
+    <audio id="atrain-audio"  >
+        <source src="./assets/atrain.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
     <header class="text-center py-10 bg-blue-800 text-white animate__animated animate__fadeInDown">
-        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 22:23</h1>
+        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 23:00</h1>
     </header>
     <main class="container mx-auto py-10">
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,6 +75,21 @@
                     alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
                 <h2 class="text-xl font-semibold">The Deep</h2>
             </li>
+            <li
+            id="atrainbutton"
+       
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="https://files.meiobit.com/wp-content/uploads/2024/03/The-Boys-A-Train.jpg"
+                    alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">Som do A train (passe o mouse)</h2>
+            </li>
+
+            <li
+            class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+            <img src="./assets/firecracker.webp"
+                alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+            <h2 class="text-xl font-semibold">Estalinho</h2>
+        </li>
         </ul>
     </main>
     <script>
@@ -80,10 +99,30 @@
         delay(2000).then(() => {
 
                 const audio = document.getElementById('background-audio');
-                audio.volume = 0.3; // Define o volume para 30%
+                audio.volume = 0.1; // Define o volume para 30%
 
                 audio.play();
+
+
+                const atrainbutton = document.getElementById('atrainbutton')
+
+                atrainbutton.addEventListener('mouseover', () => {
+                    console.log('a')
+                    audio.pause()
+                    const atrain = document.getElementById('atrain-audio')
+                    const atrainbutton = document.getElementById('atrain')
+                    atrain.play()
+                })
+
+
+                atrainbutton.addEventListener('mouseleave', () => {
+                    audio.pause()
+                })
             })
+
+
+
+        
 
     </script>
 </body>
