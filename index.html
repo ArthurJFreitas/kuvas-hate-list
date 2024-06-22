@@ -144,7 +144,10 @@
 
         document.getElementById('miau-btn').addEventListener('click', () => {
             pauseAllAudios();
-            document.getElementById('miauaudio').play();
+
+            const miau = document.getElementById('miauaudio').play();
+            miau.volume = 0.1
+            miau.play()
         });
     </script>
 </body>
