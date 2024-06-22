@@ -29,8 +29,12 @@
         <source src="./assets/atrain.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
+    <audio id="lula-audio">
+        <source src="./assets/lula-tira.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
     <header class="text-center py-10 bg-blue-800 text-white animate__animated animate__fadeInDown">
-        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 23:11</h1>
+        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 23:19</h1>
         <button id="music">Musica</button>
     </header>
     <main class="container mx-auto py-10">
@@ -107,10 +111,11 @@
                 <h2 class="text-xl font-semibold">Esposa do Takin </h2>
             </li>
             <li
+                id="lula-btn"
                 class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
                 <img src="https://pics.craiyon.com/2023-12-16/BesNpl2nS0irCsbA8jZ0-g.webp" alt="O Bruto"
                     class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
-                <h2 class="text-xl font-semibold">SoundPad do Gordo </h2>
+                <h2 class="text-xl font-semibold">SoundPad do Gordo (clique)</h2>
             </li>
         </ul>
     </main>
@@ -119,27 +124,37 @@
             return new Promise(resolve => setTimeout(resolve, time));
         }
 
-        const musica = document.getElementById('music')
+
+
         const audio = document.getElementById('background-audio');
-        audio.volume = 0.2; // Define o volume para 30%
+        const musica = document.getElementById('music')
 
-
-
+        const lulaudio = document.getElementById('lula-audio')
+        const lula = document.getElementById('lula-btn')
         const atrainbutton = document.getElementById('atrainbutton')
+        const atrain = document.getElementById('atrain-audio')
+
 
         atrainbutton.addEventListener('click', () => {
             console.log('a')
             audio.pause()
-            const atrain = document.getElementById('atrain-audio')
-            const atrainbutton = document.getElementById('atrain')
+
             atrain.play()
         })
 
 
+
         musica.addEventListener('click', () => {
+            audio.volume = 0.2; // Define o volume para 30%
             audio.play()
         })
 
+
+
+        lula.addEventListener('click', () => {
+            audio.pause()
+            lulaudio.play()
+        })
 
 
 
