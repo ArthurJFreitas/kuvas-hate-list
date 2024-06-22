@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odiados pela Kuvas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            background-color: #1E1E1E;
+            color: #EDEDED;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900">
+    <audio id="background-audio"  loop>
+        <source src="./assets/hate.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <header class="text-center py-10 bg-blue-800 text-white animate__animated animate__fadeInDown">
+        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 22:23</h1>
+    </header>
+    <main class="container mx-auto py-10">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="https://noticiasdatv.uol.com.br/media/_versions/artigos/amazon-prime-the-boys-homeland-antony-starr-reproducao-amazon-prime_fixed_medium.jpg"
+                    alt="Capitao Pa" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">Capitao Pa</h2>
+            </li>
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMErS1UXQrwhTa91Xqo6Mc4ukib1r39ihkiA&s"
+                    alt="Sable Ward" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">Sable Ward</h2>
+            </li>
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="./assets/biluluca.png" alt="Biluluca"
+                    class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">Biluluca</h2>
+            </li>
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="./assets/butcha.jfif" alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">O Bruto</h2>
+            </li>
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2020/10/the-boys-black-noir.jpg"
+                    alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">Black Noir Primeiro</h2>
+            </li>
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2020/10/the-boys-black-noir.jpg"
+                    alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">Black Noir Segundo</h2>
+            </li>
+            <li
+                class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="https://cdn.vox-cdn.com/thumbor/zSKcXJ0VYad0T4BpJF9mR8l_Xtg=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21867009/the_boys_season_2_THBY_S2_Unit_203_7536RC_rgb.jpg"
+                    alt="O Bruto" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
+                <h2 class="text-xl font-semibold">The Deep</h2>
+            </li>
+        </ul>
+    </main>
+    <script>
+        function delay(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
+        }
+        delay(2000).then(() => {
+
+                const audio = document.getElementById('background-audio');
+                audio.volume = 0.3; // Define o volume para 30%
+
+                audio.play();
+            })
+
+    </script>
+</body>
+
+</html>
