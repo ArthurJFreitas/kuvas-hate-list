@@ -43,11 +43,12 @@
     </audio>
 
     <header class="text-center py-10 bg-blue-800 text-white animate__animated animate__fadeInDown">
-        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 23:19</h1>
+        <h1 class="text-4xl font-bold">Odiados pela Kuvas | Atualizado em 21/06/2024 as 23:42</h1>
         <button id="music">Musica</button>
+        <button id="toggle-view" class="ml-4 bg-gray-700 text-white px-4 py-2 rounded">Mudar Orientação</button>
     </header>
     <main class="container mx-auto py-10">
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <li class="bg-gray-800 rounded-lg p-6 text-center custom-shadow transform hover:scale-105 transition-transform duration-100 animate__animated animate__fadeInUp animate__delay-1s">
                 <img src="./assets/pe.webp" alt="Capitao Pa" class="mx-auto rounded-full mb-4 w-32 h-32 object-cover">
                 <h2 class="text-xl font-semibold">Pé do Hopper</h2>
@@ -149,6 +150,13 @@
             miau.volume = 0.1
             miau.play()
         });
+
+        document.getElementById('toggle-view').addEventListener('click', () => {
+            const ul = document.querySelector('main ul');
+            ul.classList.toggle('grid-cols-1');
+            ul.classList.toggle('sm:grid-cols-2');
+            ul.classList.toggle('lg:grid-cols-4');
+         });
     </script>
 </body>
 
