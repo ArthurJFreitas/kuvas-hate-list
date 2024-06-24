@@ -406,7 +406,7 @@
         const formData = {
           name: name,
           image: imageUrl,
-          audio: await toBase64(audio),
+          audio: audio ? await toBase64(audio) : null,
         };
 
         console.log(formData)
